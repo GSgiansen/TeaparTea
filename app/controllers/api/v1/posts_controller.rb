@@ -1,4 +1,5 @@
 class Api::V1::PostsController <ApplicationController
+
     def index
         @posts = Post.all
         render json:@posts
@@ -19,6 +20,6 @@ class Api::V1::PostsController <ApplicationController
     private 
 
     def post_params
-        params.require(:post).permit(:title, :tag)
+        params.require(:post).permit(:title, :body)
     end
 end

@@ -16,22 +16,30 @@ function App() {
   const [posts,setPosts]=useState([])
   const postsURL="http://localhost:3000/api/v1/posts"
   const cors = require("cors")
-  
 
 
-  const createPost = async(a) =>{
+  const createPost = ({id,title,body}) =>{
     
+  
+    fetch(postsURL, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify({title:title, body:body})
+    })
+    .then(response => response.json())
+    .then((lol) => console.log(lol))
 
   }
 
   const addPost = ({title,body}) => {
-    const id = 7
-    
-    const newP={id,title,body}
-    createPost(newP)
+    const id = 8
+    createPost({id,title,body})
 
-    setPosts([...posts,newP])
-    console.log(posts)
+    //setPosts([...posts,newP])
+   // console.log(posts)
 
   }
 
