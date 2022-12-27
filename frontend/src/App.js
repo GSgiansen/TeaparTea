@@ -17,16 +17,17 @@ function App() {
   const postsURL="http://localhost:3000/api/v1/posts"
   const cors = require("cors")
 
-  const addPost = ({userid,content}) => {
-    console.log(userid)
-    const newP={userid,content}
+  const addPost = ({title,body}) => {
+    console.log(title)
+    const id = 7
+    const newP={id,title,body}
     setPosts([...posts,newP])
     console.log(posts)
 
   }
 
   const fetchPostList  = () => {
-    console.log("wadio")
+    console.log("posts fetched")
     fetch(postsURL)
     .then((response) => response.json())
     .then((data) => {

@@ -4,12 +4,12 @@ import { useState } from 'react'
 const Newpost = ({addPost,testID}) => {
   
     const onPost = () =>{
-        addPost({userid,content})
+        addPost({title,body})
         setUserID(testID)
         setContent('')
     }
-    const [userid, setUserID] = useState(testID)
-    const [content, setContent] = useState('')
+    const [title, setUserID] = useState(testID)
+    const [body, setContent] = useState('')
   return (
     <div className='newpost'>
         <form>
@@ -24,7 +24,7 @@ const Newpost = ({addPost,testID}) => {
         className='prompt'
         type="text"
         placeholder='Whats the tea today babe ?'
-        value={content}
+        value={body}
         onChange={(e) => setContent(e.target.value)}
         />
         </form>
