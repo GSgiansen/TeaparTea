@@ -16,11 +16,20 @@ function App() {
   const [posts,setPosts]=useState([])
   const postsURL="http://localhost:3000/api/v1/posts"
   const cors = require("cors")
+  
+
+
+  const createPost = async(a) =>{
+    
+
+  }
 
   const addPost = ({title,body}) => {
-    console.log(title)
     const id = 7
+    
     const newP={id,title,body}
+    createPost(newP)
+
     setPosts([...posts,newP])
     console.log(posts)
 
