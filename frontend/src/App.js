@@ -18,7 +18,7 @@ function App() {
   const cors = require("cors")
 
 
-  const createPost = ({id,title,body}) =>{
+  const createPost = ({title,body}) =>{
     
   
     fetch(postsURL, {
@@ -30,13 +30,12 @@ function App() {
       body: JSON.stringify({title:title, body:body})
     })
     .then(response => response.json())
-    .then((lol) => console.log(lol))
+    .then((lol) => {setPosts([...posts,lol.data])})
 
   }
 
   const addPost = ({title,body}) => {
-    const id = 8
-    createPost({id,title,body})
+    createPost({title,body})
 
     //setPosts([...posts,newP])
    // console.log(posts)
