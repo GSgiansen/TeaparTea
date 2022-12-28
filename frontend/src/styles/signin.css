@@ -4,3 +4,8 @@
     justify-content: flex-start;
     color: white;
 }
+
+.text-control{
+    display: flex;
+    align-items: center;
+}
