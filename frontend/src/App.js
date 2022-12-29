@@ -37,8 +37,10 @@ function App() {
   const addPost = ({title,body}) => {
     createPost({title,body})
 
-    //setPosts([...posts,newP])
-   // console.log(posts)
+  }
+
+  const delPost = (id) =>{
+    setPosts(posts.filter((post) => post.id !== id))
 
   }
 
@@ -62,7 +64,7 @@ function App() {
       <Navbar/>
       <header className="main-body">
       <Newpost addPost={addPost} testID={testID}/>
-        <Wall posts={posts}/>
+        <Wall posts={posts} onDelete={delPost}/>
       </header>
     </div>
   );
