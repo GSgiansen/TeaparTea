@@ -39,7 +39,11 @@ function App() {
 
   }
 
-  const delPost = (id) =>{
+  const delPost = async (id) =>{
+    await fetch(postsURL,{
+      method:"delete"
+    }
+      )
     setPosts(posts.filter((post) => post.id !== id))
 
   }

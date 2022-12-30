@@ -5,6 +5,12 @@ class Api::V1::PostsController <ApplicationController
         render json:@posts
     end
 
+    def delete
+        @post = Post.find(params[:id])
+        @post.destroy
+        @posts=Posts.all
+        render json:{ data: @posts,statu: "sucessfully deleted"}, status: :ok
+    end
 
 
     def create
