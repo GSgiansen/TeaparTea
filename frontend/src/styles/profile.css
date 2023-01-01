@@ -1,4 +1,5 @@
 .container{
+    font-size: 3rem;
     background-color: grey;
     color: white;
     display: flex;
@@ -8,4 +9,8 @@
 .header{
     width: 100vw;
     background-color: black;
+}
+
+.text{
+    margin: 20px;
 }

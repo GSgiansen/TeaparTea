@@ -1,8 +1,10 @@
-.container{
+.container-2{
     font-size: 3rem;
     display: flex;
     justify-content: flex-start;
     color: white;
+    flex-direction: column;
+    
 }
 
 .text-control{
