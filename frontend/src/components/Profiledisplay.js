@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Profilepic from './Profilepic'
 const Profiledisplay = () => {
   return (
-    <div>Profiledisplay</div>
+    <div>
+      <Profilepic/>
+    </div>
   )
 }
 

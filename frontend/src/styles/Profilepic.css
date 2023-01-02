@@ -1,0 +1,6 @@
+.dp{
+    display: flex;
+    border-radius: 50%;
+    height: 30vh;
+    width: 30vw;
+}
