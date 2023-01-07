@@ -1,6 +1,23 @@
 .dp{
     display: flex;
+    flex-direction: column;
+
+}
+
+.pic{
     border-radius: 50%;
     height: 30vh;
+    width: 30vh;
+    margin: 16px;
+}
+
+.bio{
+    margin: 16px;
     width: 30vw;
+    font-size: 2rem;
+}
+
+.display{
+    display: flex;
+
 }
