@@ -14,9 +14,13 @@ import {
 } from "@chakra-ui/react";
 import Logo from "./Logo";
 import { NavLink, Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const {state}= useLocation();
+  const userID=state
+  console.log(userID)
 
   return (
     <>
@@ -37,13 +41,13 @@ function Sidebar() {
           </DrawerHeader>
 
           <DrawerBody className="drawContainer">
-            <Link to="/" className="sidebar">
+            <Link to="/" className="sidebar" state={userID}>
               Home
             </Link>
-            <Link to="/profile" className="sidebar">
+            <Link to="/profile" className="sidebar" state={userID}>
               Profile
             </Link>
-            <Link to="/about" className="sidebar">
+            <Link to="/about" className="sidebar" state={userID}>
               About
             </Link>
             <Link to="/signin" className="sidebar">

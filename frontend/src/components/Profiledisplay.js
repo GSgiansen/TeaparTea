@@ -3,6 +3,7 @@ import Profilepic from './Profilepic'
 import Wall from './Wall'
 import s from "../styles/Profilepic.css"
 const Profiledisplay = () => {
+
   return (
     <div className="display">
       <Profilepic/>
