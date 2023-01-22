@@ -17,7 +17,7 @@ function App() {
   const postsURL="http://localhost:3000/api/v1/posts"
   const cors = require("cors")
 
-
+  //adds the post to the database and display on webstie
   const createPost = ({title,body}) =>{
     
   
@@ -39,12 +39,11 @@ function App() {
 
   }
 
-  const delPost = async (id) =>{
-    await fetch(postsURL,{
-      method:"delete"
+  const delPost = (id) =>{
+    fetch(postsURL+ `/${id}` ,{
+      method:"DELETE"
     }
-      )
-    setPosts(posts.filter((post) => post.id !== id))
+      ).then(() => setPosts(posts.filter((post) => post.id !== id)))
 
   }
 

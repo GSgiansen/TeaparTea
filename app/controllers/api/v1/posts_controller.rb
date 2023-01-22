@@ -2,14 +2,25 @@ class Api::V1::PostsController <ApplicationController
 
     def index
         @posts = Post.all
-        render json:@posts
+        render json: @posts
+    end
+    def show
+        @post = Post.find(params[:id])
+        render json:@post
     end
 
     def delete
         @post = Post.find(params[:id])
         @post.destroy
-        @posts=Posts.all
+        @posts = Post.all
         render json:{ data: @posts,statu: "sucessfully deleted"}, status: :ok
+    end
+
+    def destroy
+        @post= Post.find(params[:id])
+        if @post.present?
+          @post.destroy
+        end
     end
 
 
