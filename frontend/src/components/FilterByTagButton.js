@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Select } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-const FilterByTagButton = ({onFilter}) => {
+const FilterByTagButton = ({onFilter,getAll}) => {
   return (
     <div>
       <Select
@@ -15,12 +15,22 @@ const FilterByTagButton = ({onFilter}) => {
         padding="10px"
         fontWeight="bold"
         onChange={(e) => {
-          onFilter(e.currentTarget.value)
+          {
+            if(e.currentTarget.value !== "all"){
+              onFilter(e.currentTarget.value)
+            }
+            else{
+              getAll()
+
+            }
+          }
+
         }}
       >
         <option value="tea">tea</option>
         <option value="rant">rant</option>
         <option value="fluff">fluff</option>
+        <option value="all">i love everything</option>
       </Select>
     </div>
   );

@@ -32,7 +32,7 @@ function App() {
     })
     .then(response => response.json())
     .then((lol) => {
-      setPosts([...posts,lol.data])})
+      setPosts([...posts,lol.data].reverse())})
 
   }
 
@@ -56,14 +56,14 @@ function App() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
-      setPosts(data)
+      setPosts(data.reverse())
       })
   }
 
   const filterPostList = (tag) =>{
     fetch(postsURL)
     .then((response) => response.json())
-    .then((data) => setPosts(data.filter((post) => post.tag==tag)))
+    .then((data) => setPosts((data.filter((post) => post.tag==tag)).reverse()))
   }
 
 
@@ -77,7 +77,7 @@ function App() {
       <Navbar/>
       <header className="main-body">
       <Newpost addPost={addPost} testID={testID}/>
-      <FilterByTagButton onFilter={filterPostList}/>
+      <FilterByTagButton onFilter={filterPostList} getAll={fetchPostList}/>
         <Wall posts={posts} onDelete={delPost}/>
       </header>
     </div>
