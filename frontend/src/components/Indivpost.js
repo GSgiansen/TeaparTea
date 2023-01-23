@@ -9,7 +9,11 @@ const Indivpost = ({id, userid,content,tag, onDelete}) => {
         <div className='userid'>
           <div className='userid'>
           {userid}
-          <div className='tag'>{tag}</div>
+          <div className='tag'
+          style={{
+            backgroundColor: tag == "tea" ? "black" : (tag =="fluff" ? "blue" :"teal")
+          }}
+          >{tag}</div>
           </div>
           <FaTimes onClick={()=> onDelete(id)}/>
         </div>
