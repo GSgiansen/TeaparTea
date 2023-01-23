@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.js"
 import Profiledisplay from '../components/Profiledisplay'
 import { NavLink, Link,useLocation } from "react-router-dom";
 const profile = () => {
+  
   return (
     <div className='container'>
       <div className='header'>

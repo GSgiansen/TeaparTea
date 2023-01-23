@@ -9,6 +9,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import FilterByTagButton from './components/FilterByTagButton';
 
 function App() {
   const {state}= useLocation();
@@ -31,7 +32,6 @@ function App() {
     })
     .then(response => response.json())
     .then((lol) => {
-      console.log(lol)
       setPosts([...posts,lol.data])})
 
   }
@@ -61,8 +61,11 @@ function App() {
   }
 
   const filterPostList = (tag) =>{
-    setPosts(posts.filter((post) => post.tag === tag))
+    fetch(postsURL)
+    .then((response) => response.json())
+    .then((data) => setPosts(data.filter((post) => post.tag==tag)))
   }
+
 
   useEffect(() => {
     fetchPostList()},[]
@@ -74,6 +77,7 @@ function App() {
       <Navbar/>
       <header className="main-body">
       <Newpost addPost={addPost} testID={testID}/>
+      <FilterByTagButton onFilter={filterPostList}/>
         <Wall posts={posts} onDelete={delPost}/>
       </header>
     </div>
