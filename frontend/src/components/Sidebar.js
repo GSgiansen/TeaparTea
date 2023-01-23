@@ -20,7 +20,6 @@ function Sidebar() {
   const btnRef = React.useRef();
   const {state}= useLocation();
   const userID=state
-  console.log(userID)
 
   return (
     <>

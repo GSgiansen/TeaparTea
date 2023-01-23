@@ -18,8 +18,8 @@ function App() {
   const cors = require("cors")
 
   //adds the post to the database and display on webstie
-  const createPost = ({title,body}) =>{
-    
+  const createPost = ({title,body,tag}) =>{
+    console.log(tag)
   
     fetch(postsURL, {
       headers: {
@@ -27,15 +27,18 @@ function App() {
         'Content-Type': 'application/json'
       },
       method: "POST",
-      body: JSON.stringify({title:title, body:body})
+      body: JSON.stringify({title:title, body:body,tag:tag})
     })
     .then(response => response.json())
-    .then((lol) => {setPosts([...posts,lol.data])})
+    .then((lol) => {
+      console.log(lol)
+      setPosts([...posts,lol.data])})
 
   }
 
-  const addPost = ({title,body}) => {
-    createPost({title,body})
+  const addPost = ({title,body,tag}) => {
+    console.log(tag)
+    createPost({title,body,tag})
 
   }
 
@@ -55,6 +58,10 @@ function App() {
       console.log(data)
       setPosts(data)
       })
+  }
+
+  const filterPostList = (tag) =>{
+    setPosts(posts.filter((post) => post.tag === tag))
   }
 
   useEffect(() => {

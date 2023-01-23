@@ -3,15 +3,34 @@
     margin: 10px;
     font-family: 'Roboto Mono', monospace;
     border-radius: 10px;
+
 }
-
-
+.select{
+    margin-top: 6px;
+    display: flex;
+}
+.testID{
+    font-weight: bold;
+    margin-right: 12px;
+    font-style: italic;
+    font-size: 1.75rem;
+}
+.tag{
+    display: flex;
+    margin-left: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.35rem;
+    align-items: center;
+    padding: 2px;
+}
 
 .userid{
     padding: 5px;
     color: rgb(67, 66, 66);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     display: flex;
     justify-content: space-between;
 
@@ -52,14 +71,19 @@ input[type=text] {
     color: white;
     border: none;
     border-radius: 5px;
-    height: 4vh;
-    width: 8vw;
+
     text-align: center;
+    padding: 8px;
+
 }
 
 .posttext{
+    display: flex;
     padding: 5px;
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    align-items: center;
+    justify-content:space-evenly
+    
 
 }

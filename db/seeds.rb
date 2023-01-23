@@ -10,30 +10,35 @@ posts=Post.create([
     {
         title:"John Cena",
         body:"happy wappy today oi had a v nice nburger nwejrhnd s2je 3ieri3h and i had coke",
+        tag:"tea",
   
   
       },
       {
         title:"Spongebob SquarePants",
         body:"sadness",
+        tag:"tea",
   
   
       },
       {
         title:"Clowning",
         body:"frustration",
+        tag:"tea",
   
   
       },
       {
         title:"Sherwin",
         body:"Playing pool right now",
+        tag:"tea",
   
   
       },
       {
         title:"Amanda",
         body:"Having fun i the us",
+        tag:"tea",
   
   
       }]

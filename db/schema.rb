@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_22_180134) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "tag", default: "rant"
+    t.string "tag", default: "tea"
   end
 
 end

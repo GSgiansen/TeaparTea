@@ -1,12 +1,18 @@
 import React from 'react'
 import s from "../styles/Indivpost.css"
 import {FaTimes} from 'react-icons/fa'
-const Indivpost = ({id, userid,content,onDelete}) => {
+const Indivpost = ({id, userid,content,tag, onDelete}) => {
   return (
     
     <div className='post'>
 
-        <div className='userid'>{userid} <FaTimes onClick={()=> onDelete(id)}/></div>
+        <div className='userid'>
+          <div className='userid'>
+          {userid}
+          <div className='tag'>{tag}</div>
+          </div>
+          <FaTimes onClick={()=> onDelete(id)}/>
+        </div>
         <p></p>
         <div className='content'>{content}</div>
     </div>

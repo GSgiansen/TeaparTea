@@ -6,7 +6,7 @@ const Wall = ({posts,onDelete}) => {
   return (
     <div className='wall'>
         
-        {posts.map((post) => <Indivpost key={post.id} id={post.id} userid={post.title} content={post.body} onDelete={onDelete}/>)}
+        {posts.map((post) => <Indivpost key={post.id} id={post.id} userid={post.title} content={post.body} tag={post.tag} onDelete={onDelete}/>)}
     </div>
 
   )
