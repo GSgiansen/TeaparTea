@@ -17,9 +17,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_23_140346) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
+    t.string "tag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "tag", default: "tea"
   end
 
   create_table "users", force: :cascade do |t|
