@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: cvwo_be_production
-  username: cvwo_be
-  password: <%= ENV["CVWO_BE_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  #database: cvwo_be_production
+  #username: cvwo_be
+  #password: <%= ENV["CVWO_BE_DATABASE_PASSWORD"] %>
