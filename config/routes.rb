@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :users
   #get 'welcome/index'
-  root "home#frontend/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
