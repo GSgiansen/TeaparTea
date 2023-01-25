@@ -1,24 +1,5 @@
-# README
+Tan Gian Sen
+A0249211M
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Frontend deployment: https://63d11b879ad4fb16c6b67cf1--capable-tartufo-82bcbc.netlify.app/
+Backend deployment: https://cvwo-backend-7cq1.onrender.com
