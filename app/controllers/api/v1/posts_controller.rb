@@ -27,7 +27,7 @@ class Api::V1::PostsController <ApplicationController
         post = Post.find(params[:id])
         user_id = post_params[:title]
             res = post.update(post_params)
-            render json: res
+    render json: res
     end
 
 
