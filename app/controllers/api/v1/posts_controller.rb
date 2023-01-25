@@ -23,6 +23,14 @@ class Api::V1::PostsController <ApplicationController
         end
     end
 
+    def update
+        post = Post.find(params[:id])
+        user_id = post_params[:title]
+            res = post.update(post_params)
+            render json: res
+    end
+
+
 
     def create
         @post = Post.new(post_params)
